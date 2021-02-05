@@ -1,0 +1,3 @@
+<% classifications = JSONModel.enum_values("user_defined_enum_1").map{|v| [I18n.t("enumerations.user_defined_enum_1.#{v}", :default => v), v]} %>
+
+<%= select_tag("job[job_params][classification]", options_for_select([""].concat(classifications)), :class => "form-control") %>

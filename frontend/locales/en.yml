@@ -1,0 +1,7 @@
+en:
+  reports:
+    parameters:
+      unprocessed: Include only unprocessed?
+    reuther_accessions_report:
+      title: Reuther Accessions Report
+      description: Generate a report of Reuther accessions
