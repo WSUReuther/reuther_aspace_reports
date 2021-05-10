@@ -73,7 +73,7 @@ class ReutherAccessionsReport < AbstractReport
     date_condition = ReutherReportsHelpers.format_date_condition(db.literal(@from), db.literal(@to), 'accession.accession_date')
 
     processing_status_condition = if @unprocessed_only
-                                    "processing_status not in ('processed', 'deaccession')"
+                                    "(processing_status IS NULL or processing_status not in ('processed', 'deaccession'))"
                                   else
                                     "1=1"
                                   end
